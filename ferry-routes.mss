@@ -1,10 +1,8 @@
-@ferry-route: #66f;
-@ferry-route-text: @ferry-route;
-
+/* Coming from openstreetmap-carto */
 #ferry-routes {
   [zoom >= 8] {
-    /* background prevents problems with overlapping ferry-routes, see #457 */
-    background/line-color: @water-color;
+    /* background prevents problems with overlapping ferry-routes, see #457 at openstreetmap-carto */
+    background/line-color: @water;
     background/line-width: 1; /* Needs to be a bit wider than the route itself because of antialiasing */
     line-color: @ferry-route;
     line-width: 0.4;
@@ -20,7 +18,7 @@
 #ferry-routes-text {
   [zoom >= 13] {
     text-name: "[name]";
-    text-face-name: @book-fonts;
+    text-face-name: @sans;
     text-placement: line;
     text-fill: @ferry-route-text;
     text-spacing: 1000;

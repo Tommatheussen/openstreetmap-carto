@@ -14,6 +14,12 @@
       dash/line-color: black;
       dash/line-dasharray: 0.4,13;
       dash/line-clip: false;
+
+      [bicycle='yes'] {
+        line/line-color: @cycle-fill;
+        dash/line-color: darken(@cycle-fill, 25%);
+      }
+
       [zoom >= 17] {
         text-name: "[name]";
         text-fill: #666666;
@@ -23,7 +29,7 @@
         text-clip: false;
         text-placement: line;
         text-min-distance: 18;
-        text-face-name: @book-fonts;
+        text-face-name: @sans;
         text-halo-radius: @standard-halo-radius;
         text-halo-fill: @standard-halo-fill;
       }
@@ -46,6 +52,12 @@
       dash/line-color: #707070;
       dash/line-dasharray: 6,25;
       dash/line-clip: false;
+
+      [bicycle='yes'] {
+        line/line-color: @cycle-fill;
+        dash/line-color: lighten(@cycle-fill, 12.5%);
+      }
+
       [zoom >= 17] {
         text-name: "[name]";
         text-fill: #666666;
@@ -55,7 +67,7 @@
         text-clip: false;
         text-placement: line;
         text-min-distance: 18;
-        text-face-name: @book-fonts;
+        text-face-name: @sans;
         text-halo-radius: @standard-halo-radius;
         text-halo-fill: @standard-halo-fill;
       }
@@ -84,6 +96,12 @@
       dash/line-color: black;
       dash/line-dasharray: 1,30;
       dash/line-clip: false;
+
+      [bicycle='yes'] {
+        line/line-color: @cycle-fill;
+        dash/line-color: darken(@cycle-fill, 25%);
+      }
+
       [zoom >= 17] {
         text-name: "[name]";
         text-fill: #666666;
@@ -93,7 +111,7 @@
         text-clip: false;
         text-placement: line;
         text-min-distance: 18;
-        text-face-name: @book-fonts;
+        text-face-name: @sans;
         text-halo-radius: @standard-halo-radius;
         text-halo-fill: @standard-halo-fill;
       }
