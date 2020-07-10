@@ -1,5 +1,3 @@
-@admin-boundaries: #ac46ac;
-
 @admin-simplify: 4;
 @admin-simplify-algorithm: visvalingam-whyatt;
 
@@ -16,38 +14,34 @@ overlapping borders correctly.
     [zoom >= 4] {
       background/line-join: bevel;
       background/line-color: white;
-      background/line-width: 1.2;
+      background/line-width: 1;
       background/line-simplify: @admin-simplify;
       background/line-simplify-algorithm: @admin-simplify-algorithm;
       line-join: bevel;
-      line-color: @admin-boundaries;
-      line-width: 1.2;
+      line-color: @state-boundaries;
+      line-width: 1;
       line-simplify: @admin-simplify;
       line-simplify-algorithm: @admin-simplify-algorithm;
     }
     [zoom >= 5] {
+      background/line-width: 1;
+      line-width: 1;
+    }
+    [zoom >= 6] {
+      background/line-width: 1.2;
+      line-width: 1.2;
+    }
+    [zoom >= 7] {
       background/line-width: 1.5;
       line-width: 1.5;
     }
-    [zoom >= 6] {
+    [zoom >= 8] {
       background/line-width: 1.8;
-      line-width: 1.8;
-    }
-    [zoom >= 7] {
-      background/line-width: 2;
       line-width: 2;
     }
-    [zoom >= 8] {
-      background/line-width: 3;
-      line-width: 3;
-    }
     [zoom >= 9] {
-      background/line-width: 3.2;
-      line-width: 3.2;
-    }
-    [zoom >= 10] {
-      background/line-width: 6;
-      line-width: 6;
+      background/line-width: 2;
+      line-width: 2.5;
     }
   }
 
@@ -65,13 +59,13 @@ overlapping borders correctly.
       line-simplify-algorithm: @admin-simplify-algorithm;
     }
     [zoom >= 7] {
-      background/line-width: 1.2;
-      line-width: 1.2;
+      background/line-width: 1;
+      line-width: 1;
     }
     [zoom >= 10] {
-      background/line-width: 4;
-      line-width: 4;
-      line-dasharray: 4,2;
+      background/line-width: 2;
+      line-width: 2;
+      line-dasharray: 3,6;
       line-clip: false;
     }
   }
@@ -80,40 +74,40 @@ overlapping borders correctly.
     [zoom >= 4] {
       background/line-join: bevel;
       background/line-color: white;
-      background/line-width: 0.4;
+      background/line-width: 0.3;
       background/line-simplify: @admin-simplify;
       background/line-simplify-algorithm: @admin-simplify-algorithm;
       line-color: @admin-boundaries;
       line-join: bevel;
-      line-width: 0.4;
+      line-width: 0.3;
       line-simplify: @admin-simplify;
       line-simplify-algorithm: @admin-simplify-algorithm;
       line-clip: false;
     }
     [zoom >= 5] {
+      background/line-width: 0.4;
+      line-width: 0.4;
+    }
+    [zoom >= 6] {
       background/line-width: 0.5;
       line-width: 0.5;
     }
-    [zoom >= 6] {
+    [zoom >= 7] {
       background/line-width: 0.6;
+      line-dasharray: 3,6;
       line-width: 0.6;
     }
-    [zoom >= 7] {
+    [zoom >= 9] {
       background/line-width: 1;
-      line-dasharray: 4,3;
       line-width: 1;
     }
-    [zoom >= 9] {
-      background/line-width: 1.8;
-      line-width: 1.8;
-    }
     [zoom >= 10] {
-      background/line-width: 2.5;
-      line-width: 2.5;
+      background/line-width: 1.6;
+      line-width: 1.6;
     }
     [zoom >= 12] {
-      background/line-width: 3;
-      line-width: 3;
+      background/line-width: 2;
+      line-width: 2;
     }
   }
   /*
@@ -127,7 +121,7 @@ overlapping borders correctly.
   The SQL has `ORDER BY admin_level`, so the boundary with the lowest
   admin_level is rendered on top, and therefore the only visible boundary.
   */
-  opacity: 0.4;
+  opacity: 0.5;
   comp-op: darken;
 }
 
@@ -136,29 +130,29 @@ overlapping borders correctly.
   [admin_level = '5'][zoom >= 11] {
     background/line-join: bevel;
     background/line-color: white;
-    background/line-width: 2;
+    background/line-width: 1.4;
     background/line-simplify: @admin-simplify;
     background/line-simplify-algorithm: @admin-simplify-algorithm;
     line-join: bevel;
     line-color: @admin-boundaries;
-    line-width: 2;
+    line-width: 1.4;
     line-simplify: @admin-simplify;
     line-simplify-algorithm: @admin-simplify-algorithm;
-    line-dasharray: 6,3,2,3,2,3;
+    line-dasharray: 3,6;
     line-clip: false;
   }
   [admin_level = '6'][zoom >= 11] {
     background/line-join: bevel;
     background/line-color: white;
-    background/line-width: 2;
+    background/line-width: 1.4;
     background/line-simplify: @admin-simplify;
     background/line-simplify-algorithm: @admin-simplify-algorithm;
     line-join: bevel;
     line-color: @admin-boundaries;
-    line-width: 2;
+    line-width: 1.4;
     line-simplify: @admin-simplify;
     line-simplify-algorithm: @admin-simplify-algorithm;
-    line-dasharray: 6,3,2,3;
+    line-dasharray: 3,6;
     line-clip: false;
   }
   [admin_level = '7'],
@@ -166,15 +160,15 @@ overlapping borders correctly.
     [zoom >= 12] {
       background/line-join: bevel;
       background/line-color: white;
-      background/line-width: 1.5;
+      background/line-width: 1.2;
       background/line-simplify: @admin-simplify;
       background/line-simplify-algorithm: @admin-simplify-algorithm;
       line-join: bevel;
       line-color: @admin-boundaries;
-      line-width: 1.5;
+      line-width: 1.2;
       line-simplify: @admin-simplify;
       line-simplify-algorithm: @admin-simplify-algorithm;
-      line-dasharray: 5,2;
+      line-dasharray: 3,6;
       line-clip: false;
     }
   }
@@ -182,21 +176,21 @@ overlapping borders correctly.
   comp-op: darken;
 }
 
-#admin-high-zoom[zoom >= 13] {
+#admin-high-zoom[zoom >= 15] {
   [admin_level = '9'],
   [admin_level = '10'] {
-    [zoom >= 13] {
+    [zoom >= 15] {
       background/line-join: bevel;
       background/line-color: white;
-      background/line-width: 2;
+      background/line-width: 1;
       background/line-simplify: @admin-simplify;
       background/line-simplify-algorithm: @admin-simplify-algorithm;
       line-join: bevel;
       line-color: @admin-boundaries;
-      line-width: 2;
+      line-width: 1;
       line-simplify: @admin-simplify;
       line-simplify-algorithm: @admin-simplify-algorithm;
-      line-dasharray: 2,3;
+      line-dasharray: 3,6;
       line-clip: false;
     }
   }
@@ -204,25 +198,25 @@ overlapping borders correctly.
   comp-op: darken;
 }
 
-#admin-text[zoom >= 11][way_pixels >= 48000] {
+#admin-text[zoom >= 13][way_pixels >= 48000] {
   [admin_level = '1'][way_pixels >= 360000],
   [admin_level = '2'][way_pixels >= 360000],
   [admin_level = '3'][way_pixels >= 196000],
   [admin_level = '4'][way_pixels >= 196000],
-  [zoom >= 12][admin_level = '5'],
-  [zoom >= 13][admin_level = '6'],
-  [zoom >= 14][admin_level = '7'],
-  [zoom >= 15][admin_level = '8'],
-  [zoom >= 16] {
+  [zoom >= 14][admin_level = '5'],
+  [zoom >= 15][admin_level = '6'],
+  [zoom >= 16][admin_level = '7'],
+  [zoom >= 17][admin_level = '8'],
+  [zoom >= 18] {
     text-name: "[name]";
-    text-face-name: @book-fonts;
+    text-face-name: @standard-font;
     text-fill: @admin-boundaries;
     text-halo-radius: @standard-halo-radius;
     text-halo-fill: @standard-halo-fill;
     text-largest-bbox-only: false;
     text-placement: line;
     text-spacing: 750;
-    text-repeat-distance: 250;
+    text-repeat-distance: 400;
     text-margin: 10;
     text-clip: true;
     text-vertical-alignment: middle;
@@ -230,14 +224,34 @@ overlapping borders correctly.
   }
 }
 
+#protected-areas::area[zoom <= 11] {
+  polygon-fill: darken(@wooded,25%);
+
+  opacity: 0.15;
+  comp-op: darken; /* In case of two area overlapping this avoid to have a darker area. */
+}
+
+#protected-areas::outline[zoom >= 7] {
+  background/line-color: lighten(@wooded,15%);
+  line-color: darken(@wooded,30%);
+  line-dasharray: 6,6;
+
+  [zoom=7] { line-width: 1.2;     background/line-width: 2.4;  }
+  [zoom=8] { line-width: 1.4;     background/line-width: 2.8;  }
+  [zoom=9] { line-width: 1.5;     background/line-width: 3.0;  }
+  [zoom=10] { line-width: 1.6;    background/line-width: 3.2;  background/line-offset: -0.8;}
+  [zoom=11] { line-width: 1.8;    background/line-width: 3.6;  background/line-offset: -0.9;}
+  [zoom>=12] { line-width: 2.0;   background/line-width: 4.0;  background/line-offset: -1;}
+  [zoom>=14] { line-width: 3.0;   background/line-width: 6.0;  background/line-offset: -1.5;}
+
+  opacity: 0.7;
+  comp-op: darken; /* Fusion with admin bordes. */
+}
+
 #protected-areas-text[zoom >= 13][way_pixels > 192000] {
   text-name: "[name]";
-  text-face-name: @book-fonts;
-  text-fill: @protected-area;
-  [boundary='aboriginal_lands'],
-  [boundary='protected_area'][protect_class='24'] {
-    text-fill: @aboriginal;
-  }
+  text-face-name: @standard-font;
+  text-fill: darken(@wooded,50%);
   text-halo-radius: @standard-halo-radius;
   text-halo-fill: @standard-halo-fill;
   text-largest-bbox-only: false;
@@ -248,65 +262,4 @@ overlapping borders correctly.
   text-clip: true;
   text-vertical-alignment: middle;
   text-dy: -10;
-}
-
-#protected-areas {
-  [way_pixels > 750] {
-    [zoom >= 8][zoom < 10] {
-      opacity: 0.25;
-      line-width: 1.2;
-      line-color: @protected-area;
-      [boundary='aboriginal_lands'],
-      [boundary='protected_area'][protect_class='24'] {
-        line-color: @aboriginal;
-      }
-      [zoom >= 9] {
-        line-width: 1.5;
-      }
-    }
-    [zoom >= 10] {
-      // inner line
-      ::wideline {
-        opacity: 0.15;
-        line-width: 3.6;
-        // Unlike planet_osm_line, planet_osm_polygon does not preserves the
-        // original direction of the OSM way: Following OGS at
-        // https://www.opengeospatial.org/standards/sfa always at the left
-        // is the interior and at the right the exterior of the polygon.(This
-        // also applies to inner rings of multipolygons.) So a negative
-        // line-offset is always an offset to the inner side of the polygon.
-        line-offset: -0.9;
-        line-color: @protected-area;
-        [boundary='aboriginal_lands'],
-        [boundary='protected_area'][protect_class='24'] {
-          line-color: @aboriginal;
-        }
-        line-join: round;
-        line-cap: round;
-        [zoom >= 12] {
-          line-width: 4;
-          line-offset: -1;
-        }
-        [zoom >= 14] {
-          line-width: 6;
-          line-offset: -2;
-        }
-      }
-      // outer line
-      ::narrowline {
-        opacity: 0.15;
-        line-width: 1.8;
-        line-color: @protected-area;
-        [boundary='aboriginal_lands'],
-        [boundary='protected_area'][protect_class='24'] {
-          line-color: @aboriginal;
-        }
-        line-join: round;
-        line-cap: round;
-        [zoom >= 12] {
-            line-width: 2;
-        }
-      }
-    }
-  }
 }
